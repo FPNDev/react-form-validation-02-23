@@ -52,6 +52,8 @@ export default function Form({ method, children, validators = [] }: React.PropsW
         if (child.type === "input") {
           return React.cloneElement<any>(child, { onChange: handleChange });
         }
+
+        return child;
       })}
       {JSON.stringify(formErrors)}
     </form>
